@@ -17,7 +17,7 @@ Another problem that persists in the labels is that some of **labels are incorre
 
 ![](https://github.com/the-catalyst/SpaceNet-Buildings-v1/blob/master/Result%20Pictures/Faulty%20Labelling/Faulty%20Labelling.png)
 
-### Data Augmentation
+## Data Augmentation
 Firstly I removed noisy images from the dataset to make it easier to train and obtain correct metrics and loss values. 
 
 Since the images removed are of forest cover, this information lost is recovered from the rest of the images which are included as there is sufficient forest cover in the included images for the model to learn that information.
@@ -29,6 +29,10 @@ Next, I moved to Data transforms apart from the default ones that fastai provide
                           size = size, tfm_y=True).databunch(bs=bs).normalize(imagenet_stats))
 
 The figure below shows the brightness and contrast adjustment transforms applied to the satellite images to make the distinction of boundaries between two buildings or buildings and background (roads, garden, trees, etc.) more apparent. 
+
+![](https://github.com/the-catalyst/SpaceNet-Buildings-v1/blob/master/Result%20Pictures/Data%20Augmentated/DA%201.png)
+
+![](https://github.com/the-catalyst/SpaceNet-Buildings-v1/blob/master/Result%20Pictures/Data%20Augmentated/DA%202.png)
 
 
 ## Model Pipeline
@@ -79,7 +83,7 @@ For simplicity, I have characterised the images in 4 types, i.e., Housing, Clust
 
 ![](https://github.com/the-catalyst/SpaceNet-Buildings-v1/blob/master/Result%20Pictures/Clustered/Clustered%202.png)
 
-### Semi Clustered Housing
+### Semi-Clustered Housing
 ![](https://github.com/the-catalyst/SpaceNet-Buildings-v1/blob/master/Result%20Pictures/Semi-Clustered%20Housing/Semi-Clustered%20Housing%201.png)
 
 ![](https://github.com/the-catalyst/SpaceNet-Buildings-v1/blob/master/Result%20Pictures/Semi-Clustered%20Housing/Semi-Clustered%20Housing%202.png)
