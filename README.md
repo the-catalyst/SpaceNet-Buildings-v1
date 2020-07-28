@@ -13,7 +13,7 @@ Moreover, another problem is that the **images don’t have good enough contrast
 
 The problem mentioned above persists in the labels as well. Whenever there’s a cluster of buildings together, the **labels are also clustered together**. This forces the model to train in a similar manner, i.e., clusters the predicted labels together when buildings are very close to each other. 
 
-Another problem that persists in the labels is that some of **labels are incorrectly marked**. To give a building a shape of a proper rectangle, some buildings are assumed to extent into tress like the example shown below. This makes it hard for the model to train, thus giving less dice value. The labelling at the center can be seen as faulty on visual inspection. 
+Another problem that persists in the labels is that some of **labels are incorrectly marked**. To give a building a shape of a proper rectangle, some buildings are assumed to extend into tress like the example shown below. This makes it hard for the model to train, thus giving less dice value. The labelling at the center can be seen as faulty on visual inspection. 
 
 ![](https://github.com/the-catalyst/SpaceNet-Buildings-v1/blob/master/Result%20Pictures/Faulty%20Labelling/Faulty%20Labelling.png)
 
